@@ -25,7 +25,7 @@ class DashboardController extends Controller
         $data = [];
 
         foreach ($contactChart as $item) {
-            $labels[] = Carbon::create()->month($item->bulan)->format('F');
+            $labels[] = Carbon::create()->month((int)$item->bulan)->format('F');
             $data[] = $item->total;
         }
 
